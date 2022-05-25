@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DapperPostgreSQLWithDataTable" Version="1.0.0" />
+    <PackageReference Include="FontAwesome.Sharp" Version="5.15.3" />
+    <PackageReference Include="Humanizer.Core.id" Version="2.11.10" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Syncfusion.Edit.Windows" Version="19.2.0.44" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\database.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>database.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\database.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>database.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
